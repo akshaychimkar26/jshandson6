@@ -1,0 +1,72 @@
+<html>
+    <head>
+        <title>Problem Solving</title>
+    </head>
+    <body>
+        <h1><u>6)Problem Solving</u></h1></br>
+        <p><h1>i)Find the Smaller Angle</h1></br>PrepBuddy has an analog clock which consists of two hands one for hour and another for minute. She wants to calculate the shorter angle formed between hour and minute hand at any given time.</br><b>Note</b>: You have to complete <b>Minimal_Angle function</b>. No need to take any input.</p>
+        <p><h1>Input Format</h1></br>The input contains two number h and m, which represents the current time as hour and minutes.</p>
+        <p><h1>Output Format</h1></br>Return the Minimal angle formed between the Hour hand and Minute hand.</p>
+        <p><h1>Constraints</h1></br>All valid times</p>
+        <p><h1>Time Limit</h1></br>1 second</p>
+        <p><h1>Example</h1></br>Sample Input 1</br>5 30</br>Sample Output 1</br>15</br>Sample Input 2</br>6 0</br>Sample Output 2</br>180</p>
+        <p>CODE</p>
+        <p>var Minimal_Angle = (h,m) =></br>{h = h % 12;
+        </br>let h1 = (h * 360) / 12 + (m * 360) / (12 * 60);</br>let m1 = (m * 360) / (60);</br>let angle = Math.abs(h1 - m1);</br>if (angle > 180) {</br>angle = 360 - angle;</br>}</br>return angle;
+        <p>OUTPUT</p>
+        <p>Input 1</br>5 30</br>Output 1</br>15</br>Input 2</br>6 0</br>Output 2</br>180</p><hr>
+
+        <p><h1>ii)Check whether the year is Leap year or not.</h1></br>Write a program which takes an year N as input from the user and find out whether the given year is a Leap Year or not.</br><b>Note</b>: You have to complete <b>Check_Leap function</b>. No need to take any input.</p>
+        <p><h1>Input Format</h1></br>The input contains a single number N, which represents a year.</p>
+        <p><h1>Output Format</h1></br>Return "Leap Year" if the given year is a Leap Year  else return "Non Leap Year".</p>
+        <p><h1>Constraints</h1></br>1000 ≤ N ≤ 10000</p>
+        <p><h1>Time Limit</h1></br>1 second</p>
+        <p><h1>Example</h1></br>Sample Input 1</br>1900</br>Sample Output 1</br>Non Leap Year</br>Sample Input 2</br>2012</br>Sample Output 2</br>Leap Year </p>
+        <p>CODE</p>
+        <p>var Check_Leap = (year) => {</br>if ((0 === year % 4) && (0 !== year % 100) || (0 === year % 400)) {</br>return ' Leap Year';</br>}</br>else</br>{</br>return ' Non Leap Year';</br>}</br>};</p>
+        <p>OUTPUT</p>
+        <p>Input 1</br>1900</br>Output 1</br>Non Leap Year</br>Sample Input 2</br>2012</br>Sample Output 2</br>Leap Year</p><hr>
+
+        <p><h1>iii)Perfect Number Check.</h1></br>Have you heard of Perfect numbers? If not let me tell you what is it, Perfect Numbers are integers that are equal to the sum of all its divisors except that number itself.</br>Now, You are given an integer N, write a program to check whether the given number is a Perfect Number or not.</br><b>Note</b>: You have to complete <b>Perfect _Check function</b>. No need to take any input.</p>
+        <p><h1>Input Format</h1></br>The input contains a single number N.</p>
+        <p><h1>Output Format</h1></br>Return "YES" if the number is a Perfect Number, else return "NO".</p>
+        <p><h1>Constraints</h1></br>1 ≤ N ≤ 100000</p>
+        <p><h1>Time Limit</h1></br>1 second</p>
+        <p><h1>Example</h1></br>Sample Input 1</br>1</br>Sample Output 1</br>YES</br>Sample Input 2</br>96345</br>Sample Output 2</br>NO</p>
+        <p>CODE</p>
+        <p>var Perfect_Check = (N) => {</br>let sum = 0;</br>for (i = 1; i <= N; i++) {</br>if (N % i === 0) {</br>sum += i;</br>}</br>}</br>if (sum === N) {</br>return "YES";</br>}</br>else{</br>return "NO";</br>}</br>};</p>
+        <p>OUTPUT</p>
+        <p>Input 1</br>1</br>Output 1</br>YES</br>Input 2</br>96345</br>Output 2</br>NO</p><hr>
+
+        <p><h1>iv)Reverse a Number.</h1></br>Write a program which takes a numebr N as input from the user and You need to reverse the number.</br><b>Note</b>: You have to complete <b>Reverse_Number function</b>. No need to take any input.</p>
+        <p><h1>Input Format</h1></br>The input contains a single number N.</p>
+        <p><h1>Output Format</h1></br>Return the reversed number.</p>
+        <p><h1>Constraints</h1></br>1 ≤ N ≤ 100000</p>
+        <p><h1>Time Limit</h1></br>1 second</p>
+        <p><h1>Example</h1></br>Sample Input 1</br>1900</br>Sample Output 1</br>91</br>Sample Input 2</br>2012</br>Sample Output 2</br>2102</p>
+        <p>CODE</p>
+        <p>var Reverse_Number = (N) => {</br>let result = 0;</br>while(N>0){</br>rem = N%10;</br>result = result*10 + rem;</br>N = Math.floor(N/10);</br>}</br>return result;</br>};</p>};</p>
+        <p>OUTPUT</p>
+        <p>Input 1</br>1900</br>Sample Output 1</br>91</br>Sample Input 2</br>2012</br>Sample Output 2</br>2102</p><hr>
+
+        <p><h1>v)Substring Check.</h1></br>You are given two strings S1 and S2, you need to check whether the string S1 is a substring of string S2 or not.</br><b>Note</b>: You have to complete <b>Substring_Check function</b>. No need to take any input.</p>
+        <p><h1>Input Format</h1></br>The first line of input contains the first string S1.</br>The second line of input contains the second string S2.</p>
+        <p><h1>Output Format</h1></br>Return "YES" if S1 is a substring of S2 else return "NO".</p>
+        <p><h1>Constraints</h1></br>1 ≤ |S1|,|S2| ≤ 100, where |S| denotes the length of string S.</p>
+        <p><h1>Time Limit</h1></br>1 second</p>
+        <p><h1>Example</h1></br>Sample Input 1</br>Hii this is Prepbuddy</br>Prepbuddy</br>Sample Output 1</br>YES</br>Sample Input 2</br>Hii this is Prepbuddy</br>Prepbytes</br>Sample Output 2</br>NO</p>
+        <p>CODE</p>
+        <p>var Substring_Check = (S1,S2) => {</br>if(S1.includes(S2)){</br>return "YES";</br>}</br>else{</br>return "NO";</br>}</br>};</p>
+        <p>OUTPUT</p>
+        <p>Input 1</br>Hii this is Prepbuddy</br>Prepbuddy</br>Output 1</br>YES</br>Input 2</br>Hii this is Prepbuddy</br>Prepbytes</br>Output 2</br>NO</p><hr>
+
+        
+
+
+
+        </body>
+
+
+
+
+    </html>
